@@ -47,6 +47,19 @@
       ],
       "method": "bake for a wile",
       "cookingTime": "45 minutes"
+    },
+    {
+      "id": "c01d",
+      "title": "Sub",
+      "ingredients": [
+        "lettuce",
+        "tomato",
+        "meat",
+        "cheese",
+        "bread"
+      ],
+      "method": "piile it up",
+      "cookingTime": "12 minutes"
     }
   ]
 }
