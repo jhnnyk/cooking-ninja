@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useTheme } from '../../hooks/useTheme'
 import { projectFirestore } from '../../firebase/config'
@@ -20,7 +20,7 @@ export default function Recipe() {
     const unsub = projectFirestore.collection('recipes').doc(id).onSnapshot((doc) => {
       if (doc.exists) {
         setIsPending(false)
-        setRecipe(doc.data())
+        setRecipe({id: doc.id, ...doc.data()})
       } else {
         setIsPending(false)
         setError('Could not find that recipe')
@@ -50,6 +50,7 @@ export default function Recipe() {
           </ul>
           <p className="method">{recipe.method}</p>
           <button onClick={handleClick}>Update me</button>
+          <Link to={`/recipes/${recipe.id}/edit`}>Edit this Recipe</Link>
         </>
       )}
     </div>

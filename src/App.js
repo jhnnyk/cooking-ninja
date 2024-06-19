@@ -7,6 +7,7 @@ import Recipe from './pages/recipe/Recipe'
 import Navbar from './components/Navbar'
 import ThemeSelector from './components/ThemeSelector';
 import { useTheme } from './hooks/useTheme';
+import Update from './pages/update/Update';
 
 function App() {
   const { mode } = useTheme()
@@ -21,6 +22,7 @@ function App() {
           <Route path='/create' element={<Create />} />
           <Route path='/search' element={<Search />} />
           <Route path='/recipes/:id' element={<Recipe />} />
+          <Route path='/recipes/:id/edit' element={<Update />} />
         </Routes>
       </BrowserRouter>
     </div>
