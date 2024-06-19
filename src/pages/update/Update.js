@@ -50,7 +50,7 @@ export default function Update() {
       {isPending && <p className='loading'>Loading...</p>}
       {recipe && <form onSubmit={handleSubmit}>
         <label>
-          <span>Recipe title: {recipe.title}</span>
+          <span>Recipe title:</span>
           <input
             type="text"
             onChange={(e) => setTitle(e.target.value)}
