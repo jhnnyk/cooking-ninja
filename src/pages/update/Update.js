@@ -13,7 +13,6 @@ export default function Update() {
   const [error, setError] = useState(false)
   const [title, setTitle] = useState('')
 
-
   useEffect(() => {
     setIsPending(true)
 

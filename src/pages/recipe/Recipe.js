@@ -50,7 +50,9 @@ export default function Recipe() {
           </ul>
           <p className="method">{recipe.method}</p>
           <button onClick={handleClick}>Update me</button>
-          <Link to={`/recipes/${recipe.id}/edit`}>Edit this Recipe</Link>
+          <p>
+            <Link to={`/recipes/${recipe.id}/edit`}>Edit this Recipe (title)</Link>
+          </p>
         </>
       )}
     </div>
